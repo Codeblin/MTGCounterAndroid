@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Magic The Gathering Counter</string>
+    <string name="player1Default">Player 1</string>
+    <string name="player2Default">Player 2</string>
+    <string name="defaultHP">25</string>
+    <string name="defaultPoison">0</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="reset">reset</string>
+</resources>

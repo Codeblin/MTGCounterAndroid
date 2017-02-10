@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.stamatis.magicthegatheringcounter.MainActivity">
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg"
+        android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:padding="8dp"
+        android:background="@color/transparentBlack">
+        <!-- PLAYER A LAYOUT -->
+        <RelativeLayout
+            android:id="@+id/playerALayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/layoutMargin">
+            <TextView
+                android:id="@+id/playerAName"
+                style="@style/playerNameView"
+                android:text="@string/player1Default" />
+            <!-- Player Health -->
+            <LinearLayout
+                android:layout_below="@id/playerAName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+
+                android:id="@+id/playerAHealthMenu">
+                <Button
+                    android:id="@+id/btnHPMinusA"
+                    style="@style/btnStyle"
+                    android:onClick="SubtractHealth"
+                    android:text="@string/minus" />
+                <TextView
+                    android:id="@+id/txtPlayerAHealth"
+                    style="@style/healthPointsView"
+                    android:text="@string/defaultHP"/>
+                <Button
+                    android:id="@+id/btnHPPlusA"
+                    style="@style/btnStyle"
+                    android:onClick="AddHealth"
+                    android:text="@string/plus"/>
+            </LinearLayout>
+            <!-- End of player health menu -->
+
+            <!-- Player poison counters -->
+            <LinearLayout
+                android:id="@+id/poisonLayoutA"
+                android:layout_below="@id/playerAHealthMenu"
+                style="@style/baseLayoutWithPadding_Horizontal">
+                <Button
+                    android:id="@+id/btnPoisonMinusA"
+                    style="@style/btnStyle"
+                    android:onClick="SubtractPoison"
+                    android:text="@string/minus"/>
+                <TextView
+                    android:id="@+id/txtPlayerAPoison"
+                    style="@style/poisonCounterView"
+                    android:text="@string/defaultPoison"/>
+                <Button
+                    android:id="@+id/btnPoisonPlusA"
+                    style="@style/btnStyle"
+                    android:onClick="AddPoison"
+                    android:text="@string/plus"/>
+            </LinearLayout>
+            <!-- end of poison counters -->
+        </RelativeLayout>
+        <!-- END_PLAYER A -->
+
+        <View
+            android:id="@+id/separationView"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <!-- PLAYER B LAYOUT -->
+        <RelativeLayout
+            android:id="@+id/playerBLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/layoutMargin">
+            <TextView
+                android:id="@+id/playerBName"
+                style="@style/playerNameView"
+                android:text="@string/player2Default"/>
+            <!-- Player Health -->
+            <LinearLayout
+                android:layout_below="@id/playerBName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:id="@+id/playerBHealthMenu">
+                <Button
+                    android:id="@+id/btnHPMinusB"
+                    style="@style/btnStyle"
+                    android:onClick="SubtractHealth"
+                    android:text="@string/minus"/>
+                <TextView
+                    android:id="@+id/txtPlayerBHealth"
+                    style="@style/healthPointsView"
+                    android:text="@string/defaultHP"/>
+                <Button
+                    android:id="@+id/btnHPPlusB"
+                    style="@style/btnStyle"
+                    android:onClick="AddHealth"
+                    android:text="@string/plus"/>
+            </LinearLayout>
+            <!-- End of player health menu -->
+
+            <!-- Player poison counters -->
+            <LinearLayout
+                android:id="@+id/poisonLayoutB"
+                android:layout_below="@id/playerBHealthMenu"
+                style="@style/baseLayoutWithPadding_Horizontal">
+                <Button
+                    android:id="@+id/btnPoisonMinusB"
+                    style="@style/btnStyle"
+                    android:onClick="SubtractPoison"
+                    android:text="@string/minus"/>
+                <TextView
+                    android:id="@+id/txtPlayerBPoison"
+                    style="@style/poisonCounterView"
+                    android:text="@string/defaultPoison"/>
+                <Button
+                    android:id="@+id/btnPoisonPlusB"
+                    style="@style/btnStyle"
+                    android:onClick="AddPoison"
+                    android:text="@string/plus"/>
+            </LinearLayout>
+            <!-- end of poison counters -->
+        </RelativeLayout>
+        <!-- END_PLAYER B -->
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnReset"
+        style="@style/resetBtn"
+        android:onClick="ResetValues"
+        android:text="@string/reset" />
+</RelativeLayout>

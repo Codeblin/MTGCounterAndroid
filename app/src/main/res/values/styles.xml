@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorActionbar</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- button color -->
+        <item name="colorButtonNormal">@color/colorActionbar</item>
+    </style>
+
+    <!-- View Styles -->
+    <style name="playerNameView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/secondaryFontColor</item>
+    </style>
+
+    <style name="healthPointsView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:textSize">@dimen/healthTextSize</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">#ffff</item>
+    </style>
+
+    <style name="poisonCounterView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:textSize">@dimen/poisonTextSize</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/poisonGreenColor</item>
+    </style>
+
+    <style name="btnStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/btnTextSize</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="resetBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textColor">#fff</item>
+
+    </style>
+    <!-- ================ -->
+
+    <!-- Layout Styles -->
+    <style name="baseLayoutWithPadding_Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">@dimen/btnTopMargin</item>
+    </style>
+</resources>
